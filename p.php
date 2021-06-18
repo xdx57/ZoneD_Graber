@@ -1,5 +1,5 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 require "fnc.php";
 if(!is_dir('result')){@unlink('result');@mkdir('result');}asu();
 echo "Masukan Id; ";
@@ -7,8 +7,6 @@ $id = trim(fgets(STDIN));
 
 echo "Save to; ";
 $sev = trim(fgets(STDIN));
-//echo "Halaman Ke -; ";
-//$hal = trim(fgets(STDIN));
 $url = "https://zone-d.org/attacker/id/$id/";
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
